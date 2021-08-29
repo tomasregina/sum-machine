@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+
+@font-face {
+	font-family: 'ds-digi';
+	src: url('fonts/ds-digi/ds-digi.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+}
+
+:root {
+	/** Fonts **/
+	--font-family-base: 'Open Sans', sans-serif;
+	--font-family-digi: 'ds-digi';
+
+	/** Colors **/
+	--color-black: #000000;
+	--color-white: #ffffff;
+	--color-dusty-gray: #999999;
+	--color-alabaster: #f6f6f6;
+	/* Call To Action Button */
+	--color-tree-poppy: #fd8b1d;
+	--color-tree-poppy-light: #fda045;
+	--color-tree-poppy-dark: #e57102;
+	/* Primary */
+	--color-mariner: #277cd9;
+	--color-mariner-light: #4e92ff;
+	--color-mariner-dark: #2465ab;
+	--color-mariner-extra-light: #eaf2fb;
+	/* Positive */
+	--color-positive: #1eaa10;
+	--color-positive-light: #25cf14;
+	--color-positive-dark: #167b0c;
+	--color-positive-extra-light: #dbfbd7;
+	/* Negative */
+	--color-negative: #ed1c24;
+	--color-negative-light: #f04248;
+	--color-negative-dark: #c61017;
+	--color-negative-extra-light: #fef1f1;
+	/* Grayscale */
+	--color-midnight: #2a3541;
+	--color-riverbed: #3f4c5a;
+	--color-shuttle-gray: #556474;
+	--color-slate-gray: #6b7c8e;
+	--color-regent-gray: #8c99a8;
+	--color-heather: #aeb7c2;
+	--color-ghost: #d1d3de;
+	--color-solitude: #e9eaef;
+	--color-aqua-haze: #f5f5f8;
+
+	/* Differentiation colors */
+	--color-valencia: #d74242;
+	--color-raw-sienna: #d78c42;
+	--color-wattle: #d7be42;
+	--color-conifer: #b2d742;
+	--color-atlantis: #5bd742;
+	--color-shamrock: #42d78c;
+	--color-turquoise: #42d7d7;
+	--color-havelock-blue: #428cd7;
+	--color-royal-blue: #4242d7;
+	--color-purple-heart: #8c42d7;
+	--color-orchid: #d742d7;
+	--color-cerise: #d7428c;
+
+	/** Color filters **/
+	/* These can be used to overlay a black (vector) image. Its an alternative
+	approach to adding the SVG DOM in the HTML DOM and using the CSS 'fill:' to
+	color the image. */
+	/* Colors can be generated on: https://codepen.io/sosuke/pen/Pjoqqp */
+	--color-filter-black: invert(0%) sepia(96%) saturate(7474%) hue-rotate(176deg) brightness(82%) contrast(100%);
+	--color-filter-white: invert(100%) sepia(0%) saturate(1%) hue-rotate(8deg) brightness(101%) contrast(101%);
+	--color-filter-dusty-gray: invert(69%) sepia(0%) saturate(496%) hue-rotate(132deg) brightness(91%) contrast(76%);
+	--color-filter-alabaster: invert(100%) sepia(92%) saturate(58%) hue-rotate(254deg) brightness(112%) contrast(93%);
+	/* Call To Action Button */
+	--color-filter-tree-poppy: invert(62%) sepia(93%) saturate(2263%) hue-rotate(347deg) brightness(103%) contrast(98%);
+	--color-filter-tree-poppy-light: invert(69%) sepia(11%) saturate(2776%) hue-rotate(341deg) brightness(102%)
+		contrast(98%);
+	--color-filter-tree-poppy-dark: invert(49%) sepia(83%) saturate(2978%) hue-rotate(7deg) brightness(97%) contrast(98%);
+	/* Primary */
+	--color-filter-mariner: invert(43%) sepia(13%) saturate(2844%) hue-rotate(171deg) brightness(100%) contrast(103%);
+	--color-filter-mariner-light: invert(44%) sepia(100%) saturate(528%) hue-rotate(187deg) brightness(102%)
+		contrast(101%);
+	--color-filter-mariner-dark: invert(31%) sepia(55%) saturate(1146%) hue-rotate(179deg) brightness(96%) contrast(90%);
+	--color-filter-mariner-extra-light: invert(100%) sepia(83%) saturate(743%) hue-rotate(176deg) brightness(101%)
+		contrast(97%);
+	/* Positive */
+	--color-filter-positive: invert(54%) sepia(100%) saturate(3701%) hue-rotate(83deg) brightness(100%) contrast(87%);
+	--color-filter-positive-light: invert(67%) sepia(77%) saturate(5419%) hue-rotate(83deg) brightness(121%) contrast(84%);
+	--color-filter-positive-dark: invert(32%) sepia(60%) saturate(1643%) hue-rotate(83deg) brightness(88%) contrast(91%);
+	--color-filter-positive-extra-light: invert(93%) sepia(16%) saturate(397%) hue-rotate(57deg) brightness(103%)
+		contrast(97%);
+	/* Negative */
+	--color-filter-negative: invert(10%) sepia(100%) saturate(5526%) hue-rotate(354deg) brightness(114%) contrast(86%);
+	--color-filter-negative-light: invert(64%) sepia(67%) saturate(5773%) hue-rotate(327deg) brightness(88%)
+		contrast(115%);
+	--color-filter-negative-dark: invert(11%) sepia(87%) saturate(5011%) hue-rotate(352deg) brightness(101%) contrast(98%);
+	--color-filter-negative-extra-light: invert(95%) sepia(65%) saturate(178%) hue-rotate(290deg) brightness(93%)
+		contrast(117%);
+	/* Grayscale */
+	--color-filter-midnight: invert(9%) sepia(7%) saturate(4046%) hue-rotate(171deg) brightness(100%) contrast(74%);
+	--color-filter-riverbed: invert(29%) sepia(18%) saturate(573%) hue-rotate(170deg) brightness(90%) contrast(92%);
+	--color-filter-shuttle-gray: invert(40%) sepia(22%) saturate(428%) hue-rotate(170deg) brightness(88%) contrast(87%);
+	--color-filter-slate-gray: invert(53%) sepia(15%) saturate(500%) hue-rotate(170deg) brightness(88%) contrast(90%);
+	--color-filter-regent-gray: invert(62%) sepia(21%) saturate(238%) hue-rotate(172deg) brightness(93%) contrast(89%);
+	--color-filter-heather: invert(92%) sepia(4%) saturate(1019%) hue-rotate(182deg) brightness(81%) contrast(83%);
+	--color-filter-ghost: invert(96%) sepia(4%) saturate(1698%) hue-rotate(187deg) brightness(89%) contrast(94%);
+	--color-filter-solitude: invert(98%) sepia(8%) saturate(853%) hue-rotate(179deg) brightness(100%) contrast(88%);
+	--color-filter-aqua-haze: invert(100%) sepia(25%) saturate(651%) hue-rotate(180deg) brightness(100%) contrast(95%);
+
+	/** Misc. variables **/
+	--button-transition-duration: 0.15s;
+	--px-rem-ratio: calc(1 / 9.6) * 1rem;
+}
+
+html {
+	font-family: var(--default-font-family);
+	font-size: 0.9vmin;
+}
+
+h3 {
+	font-family: var(--font-family-base);
+	font-size: 16px;
+	font-weight: 400;
+	color: var(--color-dusty-gray);
+	margin: 0;
+}
+
+pre#logging {
+	font-size: 1.5em;
+	white-space: pre-wrap;
+	word-wrap: normal;
+	width: 100%;
+	tab-size: 2;
+	background-color: #fafafa;
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+#dataArea {
+	width: 100%;
+	box-sizing: border-box;
+}
+
+#toolContainer {
+	border: 1px solid var(--color-black);
+	margin: 20px auto;
+	width: 100px;
+	height: 100px;
+	transform-origin: top center;
+}
+
+#toolContainer progress {
+	width: inherit;
+	height: inherit;
+}
+
+#settingsContainer progress {
+	width: 100%;
+}
+
+#board-settings-container {
+	display: flex;
+	flex-direction: row;
+	height: 24px;
+}
+
+.board-settings {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.board-settings p {
+	font-family: sans-serif;
+	font-size: 12px;
+	margin-right: 4px;
+}
+
+.board-settings button {
+	height: 100%;
+	line-height: 1;
+	margin-left: 2px;
+	margin-right: 2px;
+}
+
+.board-settings button.active {
+	font-weight: bold;
+}
+
+.board-settings:nth-child(n + 2) {
+	margin-left: 8px;
+}

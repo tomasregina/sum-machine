@@ -1,0 +1,64 @@
+{
+	"hundred-days": {
+		"settings": {
+			"settings": "Settings",
+			"select-order": "Select Order",
+			"ascending": "Ascending (1 - 100)",
+			"descending": "Descending (100 - 1)"
+		},
+		"reset": "Reset"
+	},
+	"sum-machine": {
+		"settings": {
+			"problems-count": "Number of problems shown",
+
+			"extra-options": {
+				"title": "Extra options",
+				"cross-tens": "Cross tens in addition and subtraction problems",
+				"decimal": "Use decimal numbers in addition and subtraction",
+				"remainder": "Allow division problem with remainder"
+			},
+			"operations-config": {
+				"title": "Type & range",
+				"addition": "+",
+				"subtraction": "-",
+				"division": "÷",
+				"multiplication": "x"
+			},
+			"multip-table": "Multiplication tables",
+			"divis-table": "Divisions tables",
+			"select-all": "Select all"
+		},
+		"answers": "Answers",
+		"shuffle": "Shuffle"
+	},
+	"qr-code": {
+		"settings": {
+			"input-label": "URL or text",
+			"input-placeholder": "Enter your URL or text here",
+			"color-label": "Color"
+		},
+		"placeholder-text": "Enter text or a link to generate a QR code"
+	},
+	"test-tool": {
+		"tool": {
+			"title": "Test tool title",
+			"increment": "Increment - primary",
+			"decrement": "Decrement - primary",
+			"settings": "Settings - secondary"
+		},
+		"settings": {
+			"checkbox": {
+				"title": "Checkbox states"
+			},
+			"inputfield": {
+				"title": "Input title"
+			},
+			"radio": {
+				"title": "Operator radio buttons",
+				"increment": "Increment",
+				"decrement": "Decrement"
+			}
+		}
+	}
+}

@@ -1,0 +1,43 @@
+{
+	"name": "@gynzy/base-tool",
+	"version": "1.0.0",
+	"description": "Base for Gynzy-tools that are developed using web-components",
+	"license": "MIT",
+	"author": "Gynzy",
+	"main": "dist/index",
+	"module": "dist/index",
+	"scripts": {
+		"start": "rollup --config ../../rollup.config.js --watch",
+		"build": "rollup --config ../../rollup.config.js",
+		"lint:eslint": "eslint --ext .ts,.html . --ignore-path ../../.gitignore",
+		"format:eslint": "eslint --ext .ts,.html . --fix --ignore-path ../../.gitignore",
+		"lint:prettier": "prettier \"**/*.js\" \"**/*.ts\" --check --ignore-path ../../.gitignore",
+		"format:prettier": "prettier \"**/*.js\" \"**/*.ts\" --write --ignore-path ../../.gitignore",
+		"lint": "npm run lint:eslint && npm run lint:prettier",
+		"format": "npm run format:eslint && npm run format:prettier",
+		"test": "rollup --config ../../rollup.config.js && web-test-runner --coverage",
+		"test:watch": "rollup --config ../../rollup.config.js && web-test-runner --watch"
+	},
+	"dependencies": {
+		"@open-wc/testing": "2.5.32",
+		"intl-messageformat": "9.6.18",
+		"lit-element": "2.4.0",
+		"lit-html": "1.3.0"
+	},
+	"devDependencies": {},
+	"prettier": {
+		"singleQuote": true,
+		"arrowParens": "avoid"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+	},
+	"lint-staged": {
+		"*.ts": [
+			"eslint --fix",
+			"prettier --write"
+		]
+	}
+}

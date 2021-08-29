@@ -13,7 +13,7 @@ yarn install
 To start dev server for selected tool first navigate to package directory and run the script:
 
 ```bash
-cd packages/hundred-days
+cd packages/sum-machine
 yarn start
 ```
 
